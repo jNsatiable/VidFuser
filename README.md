@@ -1,2 +1,2 @@
 # VidFuser
-An app for merging multiple videos.
+An app for easily merging videos.
