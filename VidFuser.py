@@ -7,18 +7,14 @@ import os, sys, time
 clips = []
 
 def specify_src():
-    #global src_folder_init
     src_folder_init = filedialog.askdirectory()
     spec_src_entry.delete(0, END)
     spec_src_entry.insert(END,src_folder_init)
-    #return src_folder_init
 
 def specify_dest():
-    #global dest_folder_init
     dest_folder_init = filedialog.askdirectory()
     spec_dest_entry.delete(0, END)
     spec_dest_entry.insert(END,dest_folder_init)    
-    #return dest_folder_init
 
 def fuse_vids():
     src_folder = spec_src_entry.get()
@@ -88,7 +84,7 @@ output_name_lbl = Label(root, text="Output Name:")
 output_name_lbl.grid(row=2, column=0)
 output_name_entry = Entry(root, width=40)
 output_name_entry.grid(row=2, column=1)
-output_name_entry.insert(END, "fused_vids.mp4")
+output_name_entry.insert(END, "output.mp4")
 
 fuse_button = Button(root, text="Start Fusing", command = fuse_vids)
 fuse_button.grid(row=3, column=1, pady=30)
